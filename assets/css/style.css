@@ -5,3 +5,21 @@
 h1 {
     font-size: 200px;
 }
+
+.result-container {
+    background-color: gray;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.divList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mal-link {
+    margin: 5px;
+    float: right;
+}
