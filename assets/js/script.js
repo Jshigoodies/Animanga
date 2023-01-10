@@ -12,9 +12,18 @@ var listOfImage = [];
 
 //event listeners
 buttonEl.addEventListener("click", function(event) {
-    event.preventDefault()
-    clearList() //if there was a previous list that was created
-    getInputValue()
+    event.preventDefault();
+    clearList(); //if there was a previous list that was created
+    getInputValue();
+});
+
+inputEl.addEventListener("keydown", function(event) {
+    if(event.key === 'Enter')
+    {
+        event.preventDefault();
+        clearList();
+        getInputValue();
+    }
 });
 
 
