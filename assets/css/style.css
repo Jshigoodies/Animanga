@@ -5,6 +5,29 @@
     --buttonfont: #efefd0;
     --cardbkg: #efefd0;
 }
+header {
+    padding: 40px;
+    text-align: center;
+    background: #d370ce;
+    color: rgb(0, 0, 0);
+    font-weight: bold ;
+    
+  }
+nav {
+    display: flex;
+    background-color: #22c8f1;
+    flex-direction: row;
+    justify-content: end;
+  }
+nav a {
+    color: #000000;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+body { 
+    background-color: dimgray;
+  }
 
 body {
     background-color: var(--theme);
