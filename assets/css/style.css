@@ -25,9 +25,6 @@ nav a {
     text-decoration: none;
     text-align: center;
   }
-body { 
-    background-color: dimgray;
-  }
 
 body {
     background-color: var(--theme);
