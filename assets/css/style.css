@@ -3,6 +3,7 @@
     --bodyfont: #6d6875;
     --button: #004e89;
     --buttonfont: #efefd0;
+    --cardbkg: #efefd0;
 }
 
 body {
@@ -21,8 +22,9 @@ body {
 }
 
 .result-container {
-    background-color: gray;
-    border: 5px solid black;
+    background-color: var(--cardbkg);
+    border: 5px solid var(--bodyfont);
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
 }
@@ -31,6 +33,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 30px;
 }
 
 .mal-link {

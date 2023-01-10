@@ -16,14 +16,21 @@
     <!-- search anime here <<<< move this to a better place --> 
   <section class="section container is-fluid">  
     <label>Place Logo here</label>
-    <input class="input is-normal" type="text" placeholder="Search Anime Name Here"> <!-- make search bar bigger -->
-    <button class="button is-info" type="button">Search</button>
+    <input class="input is-normal user-input-search" type="text" placeholder="Search Anime Name Here"> <!-- make search bar bigger -->
+    <button class="result-button button is-info" type="button">Search</button>
   </section>
 
-    <div class="divList">
+  <section>
+    <div class="divList box section">
       <!-- where the serach results are going to be-->
+      <ul>
+        <li id="title">Title</li>
+        <li id="image">Image</li>
+        <li id="genre">Genre</li>
+        <li id="url">URL</li>
+      </ul>
     </div>
-
+  </section>
 
 
 	<script src="./assets/js/script.js"></script>
