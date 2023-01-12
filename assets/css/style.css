@@ -1,30 +1,47 @@
 :root {
-    --theme: #f5dbe8;
-    --bodyfont: #6d6875;
-    --button: #8BE0D5;
-    --buttonfont: #efefd0;
-    --cardbkg: #efefd0;
+    --bkgcolor: #F5DBE8;
+    --bodyfont: #6D6875;
+    --accent: #8BE0D5;
+    --buttonfont: #EFEFD0;
+    --cardbkg: #EFEFD0;
+    --linkhover: #DC9BBA
 }
+
 header {
     padding: 40px;
     
   }
+
 nav {
     display: flex;
-    background-color: #2ecaf1;
+    background-color: var(--accent);
     flex-direction: row;
     justify-content: end;
     width: 100%;
     margin: 0;
+    font-weight: bold;
   }
+
 nav a {
-    color: #000000;
+    color: var(--bodyfont);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
   }
 
-  nav a:hover { color : #f51ec6; }
+  nav a:hover { 
+    color: var(--linkhover); 
+}
+
+body {
+    background-color: var(--bkgcolor);
+    color: var(--bodyfont);
+}
+
+img {
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
 
 .container1 {
     max-width: none;
@@ -33,24 +50,13 @@ nav a {
     width: 100%;
     padding-bottom: 0px;
   }
+
 .container2 {
     max-width: none;
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
   }
-
-
-
-body {
-    background-color: var(--theme);
-    color: var(--bodyfont);
-}
-
-img {
-    border-radius: 5px;
-    margin-bottom: 1em;
-}
 
 .header {
    border-bottom: 5px solid var(--bodyfont);
@@ -79,6 +85,11 @@ img {
     margin: 5px;
     float: right;
 }
+
+.favorites {
+    padding-left: 3em;
+}
+
 .image {
     padding-left: 32px;
 
