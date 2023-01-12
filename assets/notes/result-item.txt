@@ -24,6 +24,7 @@
   dark pink: #DC9BBA
   cyan: #8FDCD5
   dark gray: #6D6875
+  beige: #EFEFD0
 
   <!-- Modal Snippet -->
   <div class="modal">
