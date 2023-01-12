@@ -18,3 +18,20 @@
   </div>
 
   ^^ will display when synopsis is clicked
+
+  <!-- Theme Colors -->
+  light pink: #F5DBE8
+  dark pink: #DC9BBA
+  cyan: #8FDCD5
+  dark gray: #6D6875
+
+  <!-- Modal Snippet -->
+  <div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <!-- Any other Bulma elements you want -->
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+Source: https://bulma.io/documentation/components/modal/
