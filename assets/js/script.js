@@ -9,6 +9,7 @@ var listOfTitles = []; // user seraching the stuff up will be returned in a Arra
 var listOfURL = [];
 var listOfGenre = [];
 var listOfImage = [];   
+var listOfSynoposis = [];
 
 //event listeners
 buttonEl.addEventListener("click", function(event) {
@@ -44,12 +45,12 @@ function searchApi(query) {
     .then(response => response.json()) //turns it into a json object
     .then(info => {
         //displays the information like titles, images, the link to MyAnimeList.net
-        // console.log(info);
+        //console.log(info);
         searchTitle(info);
         searchURL(info);
         searchGenre(info);
         searchImage(info);
-        
+        searchSynopsis(info);
         display();
 
 
@@ -104,6 +105,21 @@ function searchImage(info) { //image url
     }
 }
 
+function searchSynopsis(info) {//description of anime
+    for(var i = 0; i < info.data.length; i++) {
+        try {
+            if(info.data[i].synopsis == null)
+            {
+                throw new Error("Null in synopsis");
+            }
+            listOfSynoposis.push(info.data[i].synopsis);
+        }
+        catch(error) {
+            listOfSynoposis.push("Synopsis Not Available");
+        }
+    }
+} 
+
 function display() {
     for(var i = 0; i < listOfTitles.length; i++) {
         // console.log("-----------------------------------");
@@ -115,18 +131,50 @@ function display() {
 
         // create elements
 
+        //div tag that holds everything
         var divItem = document.createElement("div");
         divItem.classList.add("result-container");
 
+        //title of anime
         var titleEl = document.createElement("h2");
         titleEl.classList.add("result-title");
         titleEl.textContent = listOfTitles[i];
 
+        //genre of anime
         var genreEl = document.createElement("p");
         genreEl.textContent = listOfGenre[i];
 
+        //image of anime
         var imgEl = document.createElement("img");
         imgEl.src = listOfImage[i];
+
+        //description of anime with event listener attached
+        var synopEl = document.createElement("button");
+        synopEl.classList.add("synopsis-button");
+        synopEl.textContent = "Synopsis";
+        synopEl.addEventListener("click", function(event) {
+            event.preventDefault();
+            displayModal(event);
+        });
+
+        //Modal-content Will not be seen
+        var modalEl = document.createElement("div");
+        modalEl.classList.add("modal-content");
+        modalEl.style.display = "none";
+        var closeButtonEl = document.createElement("button");
+        closeButtonEl.classList.add("close");
+        closeButtonEl.textContent = "Exit"; //multiplication 'x'
+        closeButtonEl.addEventListener("click", function(event) {
+            closeModal(event);
+        });
+        var textModalEl = document.createElement("p");
+        textModalEl.textContent = listOfSynoposis[i];
+        modalEl.appendChild(closeButtonEl);
+        modalEl.appendChild(textModalEl);
+
+
+
+
 
         var malLink = document.createElement("a");
         malLink.classList.add("mal-link");
@@ -138,12 +186,26 @@ function display() {
         divItem.appendChild(titleEl);
         divItem.appendChild(genreEl);
         divItem.appendChild(imgEl);
+        divItem.appendChild(synopEl);
         divItem.appendChild(malLink);
+        divItem.append(modalEl);
         //added all of it to the item
 
         divListEl.appendChild(divItem);
         //add it to the actual page
     }
+}
+
+function displayModal(event) {
+   var parent = event.target.parentNode;
+   var child = parent.querySelector(".modal-content")
+   child.style.display = "block";
+}
+
+function closeModal(event) {
+    //console.log("here");
+    var parent = event.target.parentNode;
+    parent.style.display = "none";
 }
 
 function clearList() { //when user serach for another thing, i want to clear the previous list
@@ -154,6 +216,7 @@ function clearList() { //when user serach for another thing, i want to clear the
     listOfURL = [];
     listOfGenre = [];
     listOfImage = [];  
+    listOfSynoposis = [];
 }
 
 // searchApi("Naruto");
