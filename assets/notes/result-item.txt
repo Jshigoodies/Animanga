@@ -2,7 +2,9 @@
     <h2 class="result-title">Naruto: Road of Naruto</h2>
     <p>Genre: Martial arts</p>
     <img src="https://cdn.myanimelist.net/images/anime/1207/128768.jpg" alt="photo anime">
+
     <button class="synopsis-button" type="button">Synopsis</button>
+
     <a class="mal-link" href="https://myanimelist.net/anime/53240/Naruto__Road_of_Naruto">MAL</a>
 </div>
 

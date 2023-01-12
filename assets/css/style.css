@@ -21,6 +21,7 @@ nav a {
     text-decoration: none;
     text-align: center;
   }
+
   nav a:hover { color : #f51ec6; }
 
 body {
