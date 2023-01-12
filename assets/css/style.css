@@ -98,6 +98,18 @@ img {
 
 .favorites {
     padding-left: 3em;
+    font-weight: bold;
+}
+
+.favorites-card {
+    margin: 30px;
+}
+
+.favorites-list {
+    text-align: center;
+    color: var(--bodyfont);
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .image {
