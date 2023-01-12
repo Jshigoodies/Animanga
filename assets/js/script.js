@@ -160,6 +160,7 @@ function display() {
         //Modal-content Will not be seen
         var modalEl = document.createElement("div");
         modalEl.classList.add("modal-content");
+        modalEl.classList.add("modal-background");
         modalEl.style.display = "none";
         var closeButtonEl = document.createElement("button");
         closeButtonEl.classList.add("close");
