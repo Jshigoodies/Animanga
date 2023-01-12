@@ -1,16 +1,12 @@
 :root {
-    --theme: #f7c59f;
+    --theme: #f5dbe8;
     --bodyfont: #6d6875;
-    --button: #004e89;
+    --button: #8BE0D5;
     --buttonfont: #efefd0;
     --cardbkg: #efefd0;
 }
 header {
     padding: 40px;
-    text-align: center;
-    background: #d370ce;
-    color: rgb(0, 0, 0);
-    font-weight: bold ;
     
   }
 nav {
@@ -25,23 +21,19 @@ nav a {
     text-decoration: none;
     text-align: center;
   }
-body { 
-    background-color: dimgray;
-  }
 
 body {
     background-color: var(--theme);
     color: var(--bodyfont);
 }
 
-.header {
-    border-bottom: 5px solid var(--bodyfont);
+img {
+    border-radius: 5px;
+    margin-bottom: 1em;
 }
 
-#animanga {
-    font-family: "Russo One", sans-serif;
-    color: #ff6b35;
-
+.header {
+    border-bottom: 5px solid var(--bodyfont);
 }
 
 .result-container {
