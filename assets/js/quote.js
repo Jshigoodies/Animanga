@@ -1,7 +1,7 @@
 let quote = document.getElementById("quote");
 let character = document.getElementById("character");
-let anime = document.getElementById("anime")
-let btn = document.getElementById("btn");
+let anime = document.getElementById("name-of-anime")
+let btn = document.getElementById("quote-btn");
 
 var url = "https://animechan.vercel.app/api/random";
 
