@@ -2,9 +2,17 @@
     <h2 class="result-title">Naruto: Road of Naruto</h2>
     <p>Genre: Martial arts</p>
     <img src="https://cdn.myanimelist.net/images/anime/1207/128768.jpg" alt="photo anime">
-    <br>
-    <br>
+    <button class="synopsis-button" type="button">Synopsis</button>
     <a class="mal-link" href="https://myanimelist.net/anime/53240/Naruto__Road_of_Naruto">MAL</a>
 </div>
 
 ^^ what it is suppose to look like
+
+
+<!-- Modal content -->
+  <div class="modal-content">
+    <button class="close" type="button">Exit</button>
+    <p>Some text in the Modal..</p>
+  </div>
+
+  ^^ will display when synopsis is clicked
