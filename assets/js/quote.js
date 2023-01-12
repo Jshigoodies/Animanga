@@ -26,3 +26,6 @@ character.style.fontSize = "19px";
 header.style.fontSize = "25px";
 character.style.fontWeight = "bold"
 anime.style.fontWeight = "bold"
+//header.style.textAlign = "center"
+//character.style.textAlign = "center"
+//anime.style.textAlign = "center"
