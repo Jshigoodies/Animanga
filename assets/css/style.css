@@ -35,7 +35,11 @@ img {
 }
 
 .header {
-    border-bottom: 5px solid var(--bodyfont);
+   border-bottom: 5px solid var(--bodyfont);
+}
+
+.container .is-fluid {
+   padding: 0px;
 }
 
 .result-container {
