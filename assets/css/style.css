@@ -15,7 +15,7 @@ header {
   }
 nav {
     display: flex;
-    background-color: #22c8f1;
+    background-color: #2ecaf1;
     flex-direction: row;
     justify-content: end;
   }
@@ -25,6 +25,7 @@ nav a {
     text-decoration: none;
     text-align: center;
   }
+  nav a:hover { color : #f51ec6; }
 
 body {
     background-color: var(--theme);
