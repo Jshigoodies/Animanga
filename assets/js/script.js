@@ -29,6 +29,8 @@ inputEl.addEventListener("keydown", function(event) {
 
 
 function getInputValue() {
+    divListEl.classList.add("box");
+    divListEl.classList.add("section"); //added css to make it look nice with bulma
     var input = inputEl.value;
     inputEl.value = ""; //clears the serach bar so it is ready for next search
     console.log(input); // user searching what they put in
