@@ -74,6 +74,16 @@ img {
     margin: 10px;
 }
 
+.result-button {
+    background-color: var(--accent);
+    color: var(--bodyfont);
+    font-weight: bold;
+}
+
+.result-button:hover {
+    color: var(--linkhover);
+}
+
 .divList {
     display: flex;
     flex-direction: row;
