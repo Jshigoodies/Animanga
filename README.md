@@ -13,7 +13,8 @@ This web app runs on most browsers. You can visit the deployed link here: https:
 
 ## Screenshots
 
-(insert screenshot)
+![Screenshot](assets/images/animanga-index.png)
+![Screenshot](assets/images/animanga-favorites.png)
 
 ## Contributing
 
