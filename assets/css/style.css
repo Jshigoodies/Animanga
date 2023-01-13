@@ -72,6 +72,12 @@ a:hover {
   }
 
 .container2 {
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.container3 {
     max-width: none;
     padding-left: 32px;
     padding-right: 32px;
