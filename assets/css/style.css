@@ -22,7 +22,9 @@ header {
 
 nav {
     display: flex;
+
     background-color: var(--accent);
+
     flex-direction: row;
     justify-content: end;
     width: 100%;
@@ -148,6 +150,41 @@ a:hover {
     padding-left: 32px;
 }
 
+h1 {
+    text-align: center;
+}
+.paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .about-us-container {
+    width: 80%; 
+    margin: 0 auto; 
+    background-color: #DC9BBA; 
+    padding: 20px; 
+    border: 1px solid #6D6875;
+    font-size: 32px; 
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .about-us-container h1 {
+    color: #000000;
+    font-size: 60px;
+  }
+  .about-us-container p{
+    color: #000000;
+    font-size: 20px;
+  }
+  #background-container {
+    background-image: url("./images/cherry-fake.jpg"); 
+    background-repeat: repeat; 
+    background-size: cover; 
+  }
 .footer {
     margin-top: auto;
 }
+
