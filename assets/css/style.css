@@ -1,30 +1,70 @@
 :root {
-    --theme: #f5dbe8;
-    --bodyfont: #6d6875;
-    --button: #8BE0D5;
-    --buttonfont: #efefd0;
-    --cardbkg: #efefd0;
+    --bkgcolor: #F5DBE8;
+    --bodyfont: #6D6875;
+    --accent: #8BE0D5;
+    --buttonfont: #EFEFD0;
+    --cardbkg: #EFEFD0;
+    --linkhover: #DC9BBA
 }
+
+* {
+    margin: 0px;
+    padding: 0px; 
+}
+html {
+    height: 100%;
+}
+
 header {
     padding: 40px;
     
   }
+
 nav {
     display: flex;
-    background-color: #8FDCD5;
+
+    background-color: var(--accent);
+
     flex-direction: row;
     justify-content: end;
     width: 100%;
     margin: 0;
+    font-weight: bold;
   }
+
 nav a {
-    color: #000000;
+    color: var(--bodyfont);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
   }
 
-  nav a:hover { color : #f51ec6; }
+  nav a:hover { 
+    color: var(--linkhover); 
+}
+
+body {
+    background-color: var(--bkgcolor);
+    color: var(--bodyfont);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+img {
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+a:link {
+    color: var(--bodyfont);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--linkhover);
+    font-weight: bold;
+}
 
 .container1 {
     max-width: none;
@@ -33,27 +73,22 @@ nav a {
     width: 100%;
     padding-bottom: 0px;
   }
+
 .container2 {
     max-width: none;
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
+    margin-bottom: 50px;
+    margin-top: 0px;
   }
 
-
-
-body {
-    background-color: var(--theme);
-    color: var(--bodyfont);
-}
-
-img {
-    border-radius: 5px;
-    margin-bottom: 1em;
-}
-
 .header {
-    border-bottom: 5px solid var(--bodyfont);
+   border-bottom: 5px solid var(--bodyfont);
+}
+
+.container .is-fluid {
+   padding: 0px;
 }
 
 .result-container {
@@ -62,6 +97,16 @@ img {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+}
+
+.result-button {
+    background-color: var(--accent);
+    color: var(--bodyfont);
+    font-weight: bold;
+}
+
+.result-button:hover {
+    color: var(--linkhover);
 }
 
 .divList {
@@ -75,6 +120,28 @@ img {
     margin: 5px;
     float: right;
 }
+
+.result-title {
+    color: var(--bodyfont);
+    font-weight: bold;
+}
+
+.favorites {
+    padding-left: 3em;
+    font-weight: bold;
+}
+
+.favorites-card {
+    margin: 30px;
+}
+
+.favorites-list {
+    text-align: center;
+    color: var(--bodyfont);
+    font-weight: bold;
+    font-size: 2em;
+}
+
 .image {
     padding-left: 32px;
 
@@ -82,6 +149,7 @@ img {
 .subtitle {
     padding-left: 32px;
 }
+
 h1 {
     text-align: center;
 }
@@ -116,3 +184,7 @@ h1 {
     background-repeat: repeat; 
     background-size: cover; 
   }
+.footer {
+    margin-top: auto;
+}
+

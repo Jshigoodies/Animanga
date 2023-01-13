@@ -8,48 +8,46 @@
   </head>
   <body>
 
-  <header class="header container1">
+    <header class="header container1">
 
-    <div><img class="image" src="./assets/images/animanga-logo.jpg"></div>
-    <p class="subtitle is-4">Your source for the best and newest anime</p>
+      <div><img class="image" src="./assets/images/animanga-logo.jpg"></div>
+      <p class="subtitle is-4">Your source for the best and newest anime</p>
+  
+      <nav>
+  
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="favorites.html">Favorites</a>
+  
+      </nav>
+  
+    </header>
 
-    <nav>
-
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="favorites.html">Favorites</a>
-
-    </nav>
-
-  </header>
-<!-- quote -->
-  <div class="container">
-    <h1>Quote of the day:</h1>
-    <div class="display">
-        <p id="quote">
-           
-        </p>
-      
-      <h3 id="character"></h3>
-      <h3 id="name-of-anime"></h3>
-    </div>
+<!-- Quote -->
+<div class="container">
+  <h1>Quote of the day:</h1>
+  <div class="display">
+      <p id="quote">
+         
+      </p>
+    
+    <h3 id="character"></h3>
+    <h3 id="name-of-anime"></h3>
   </div>
+</div>
 
-    <!-- search anime here <<<< move this to a better place --> 
-  <section class="container2">  
-    <label>Still working on it</label>
-    <input class="input is-normal user-input-search" type="text" placeholder="Search Anime Name Here"> <!-- make search bar bigger -->
-    <button class="result-button button" type="button">Search</button>
+<!-- Heading -->
+  <section class="section container is-fluid">  
+    <h1 class="is-size-3 favorites">Favorites</h1>
   </section>
 
-  <section>
-    <div class="divList">
-
-      <!-- where the serach results are going to be-->
-
+  <!-- Content -->
+  <section class="section box favorites-card">
+    <div class="favorites-list">
+      <p><img src="assets/images/favorites-empty.png"></p>
+      <p>No favorites yet</p>
     </div>
   </section>
-
 
 	<script src="./assets/js/script.js"></script>
   <footer class="footer">
