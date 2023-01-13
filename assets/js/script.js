@@ -150,9 +150,14 @@ function display() {
         var imgEl = document.createElement("img");
         imgEl.src = listOfImage[i];
 
+        var nextLineEl = document.createElement("br");
+
         //description of anime with event listener attached
         var synopEl = document.createElement("button");
         synopEl.classList.add("synopsis-button");
+        synopEl.classList.add("modal-button");
+        synopEl.classList.add("result-button");
+        synopEl.classList.add("button");
         synopEl.textContent = "Synopsis";
         synopEl.addEventListener("click", function(event) {
             event.preventDefault();
@@ -161,18 +166,37 @@ function display() {
 
         //Modal-content Will not be seen
         var modalEl = document.createElement("div");
-        modalEl.classList.add("modal-content");
-        modalEl.style.display = "none";
+        modalEl.classList.add("modal");
+        modalEl.classList.add("is-hidden");
+
+        var modalBackground = document.createElement("div");
+        modalBackground.classList.add("modal-background");
+
+        var modalContent = document.createElement("div");
+        modalContent.classList.add("modal-content");
+
+
         var closeButtonEl = document.createElement("button");
-        closeButtonEl.classList.add("close");
+        closeButtonEl.classList.add("modal-close");
+        closeButtonEl.classList.add("is-large");
         closeButtonEl.textContent = "Exit"; //multiplication 'x'
         closeButtonEl.addEventListener("click", function(event) {
             closeModal(event);
         });
         var textModalEl = document.createElement("p");
+        textModalEl.classList.add("synopsis-text");
         textModalEl.textContent = listOfSynoposis[i];
+        textModalEl.style.color = "white";
+
+        modalEl.appendChild(modalBackground);
+
+        // content
+        modalContent.appendChild(textModalEl);
+        modalEl.appendChild(modalContent);
+
+        // button
         modalEl.appendChild(closeButtonEl);
-        modalEl.appendChild(textModalEl);
+
 
 
 
@@ -188,6 +212,7 @@ function display() {
         divItem.appendChild(titleEl);
         divItem.appendChild(genreEl);
         divItem.appendChild(imgEl);
+        divItem.appendChild(nextLineEl);
         divItem.appendChild(synopEl);
         divItem.appendChild(malLink);
         divItem.append(modalEl);
@@ -200,14 +225,16 @@ function display() {
 
 function displayModal(event) {
    var parent = event.target.parentNode;
-   var child = parent.querySelector(".modal-content")
-   child.style.display = "block";
+   var child = parent.querySelector(".modal")
+   child.classList.remove("is-hidden");
+   child.classList.add("is-active");
 }
 
 function closeModal(event) {
     //console.log("here");
     var parent = event.target.parentNode;
-    parent.style.display = "none";
+    parent.classList.remove("is-active");
+    parent.classList.add("is-hidden")
 }
 
 function clearList() { //when user serach for another thing, i want to clear the previous list
