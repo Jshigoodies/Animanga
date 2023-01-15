@@ -207,6 +207,20 @@ function display() {
         malLink.textContent = "MyAnimeList";
         malLink.href = listOfURL[i];
 
+
+
+        //favorites button
+        var favoriteButton = document.createElement("button");
+        favoriteButton.classList.add("favorite-button");
+        favoriteButton.classList.add("result-button");
+        favoriteButton.classList.add("button");
+        favoriteButton.textContent = "+";
+        favoriteButton.addEventListener("click", function(event) {
+            addToFavorites(event);
+        });
+        
+
+
         // append elements
 
         divItem.appendChild(titleEl);
@@ -215,7 +229,8 @@ function display() {
         divItem.appendChild(nextLineEl);
         divItem.appendChild(synopEl);
         divItem.appendChild(malLink);
-        divItem.append(modalEl);
+        divItem.appendChild(modalEl);
+        divItem.appendChild(favoriteButton);
         //added all of it to the item
 
         divListEl.appendChild(divItem);
@@ -235,6 +250,28 @@ function closeModal(event) {
     var parent = event.target.parentNode;
     parent.classList.remove("is-active");
     parent.classList.add("is-hidden")
+}
+
+function addToFavorites(event) {
+    var parent = event.target.parentNode;
+    var title = parent.querySelector(".result-title");
+    var genre = parent.querySelector("p");
+    var image = parent.querySelector("img");
+    var url = parent.querySelector(".mal-link");
+    var synoposis = parent.querySelector(".modal").querySelector(".modal-content").querySelector(".synopsis-text");
+    console.log(title.textContent);
+    console.log(genre.textContent);
+    console.log(image.src);
+    console.log(url.href);
+    console.log(synoposis.textContent);
+    console.log("added to favorites")
+    var info = [genre.textContent, image.src, url.href, synoposis.textContent]; // genre, image_url, MAL url, synopsis
+    localStorage.setItem(title.textContent, JSON.stringify(info));
+
+
+    //remove the button after adding to favorites
+    var buttonFavorite = parent.querySelector(".favorite-button");
+    parent.removeChild(buttonFavorite);
 }
 
 function clearList() { //when user serach for another thing, i want to clear the previous list
