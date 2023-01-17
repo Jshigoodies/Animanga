@@ -73,8 +73,11 @@ a:hover {
     width: 100%;
     padding-bottom: 0px;
   }
+  .container2{
+    width: auto;
+  }
 
-.container2 {
+.container3 {
     max-width: none;
     padding-left: 32px;
     padding-right: 32px;
@@ -182,9 +185,14 @@ h1 {
   #background-container {
     background-image: url("./images/cherry-fake.jpg"); 
     background-repeat: repeat; 
-    background-size: cover; 
+    background-size: cover;
+    height: 100%; 
   }
 .footer {
-    margin-top: auto;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 
